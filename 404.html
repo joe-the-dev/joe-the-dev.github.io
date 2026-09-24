@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dat Portfolio</title>
+    <script>
+      // SPA redirect for GitHub Pages
+      // Encodes the full path+query+hash into the redirect param so index.html can restore it
+      var l = window.location
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/?redirect=' + encodeURIComponent(l.pathname + l.search) +
+        (l.hash ? '&hash=' + encodeURIComponent(l.hash) : '')
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
+

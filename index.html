@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Dat Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Muli:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      window.addEventListener('DOMContentLoaded', event => {
+        const sideNav = document.body.querySelector('#sideNav')
+        if (sideNav) {
+          new bootstrap.ScrollSpy(document.body, {
+            target: '#sideNav',
+            offset: 74
+          })
+        }
+
+        const navbarToggler = document.body.querySelector('.navbar-toggler')
+        const responsiveNavItems = [].slice.call(
+          document.querySelectorAll('#navbarResponsive .nav-link')
+        )
+        responsiveNavItems.map(function (responsiveNavItem) {
+          responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+              navbarToggler.click()
+            }
+          })
+        })
+      })
+    </script>
+    <title>Dat Portfolio</title>
+    <script>
+      // Restore SPA route after GitHub Pages 404 redirect
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const redirect = params.get('redirect');
+        const hash = params.get('hash');
+        if (redirect) {
+          const url = decodeURIComponent(redirect) + (hash ? decodeURIComponent(hash) : '');
+          window.history.replaceState(null, '', url)
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-D2k1Ykar.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-_zt_A1WB.css">
+  </head>
+  <body id="page-top">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
